@@ -1,10 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>用户管理</title>
 </head>
 <body>
+<div id="vm-id">
+    <table>
+        <tr>
+            <td th:each="user:${users}" th:text="${user.name}"></td>
+        </tr>
+    </table>
+    <button onclick="test()">test</button>
+    <button @click="showdatas">showdatas</button>
+    <button @click="testarr">testarr</button>
+    <span>名字：</span><input  type="text" v-model="user.name">
+    <span>年龄：</span><input type="number" v-model="user.age">
+    <button @click="submit">submit</button>
+    <input type="hidden" th:value="${userJSON}" id="userJSON">
+    <input type="hidden" th:value="${usersJSON}" id="usersJSON">
+</div>
+<script type="text/javascript" th:src="${'/lib/jquery.min.js'}"></script>
+<script type="text/javascript" th:src="${'/lib/bootstrap/js/bootstrap.min.js'}"></script>
+<script type="text/javascript" th:src="${'/lib/vue2/vue.min.js'}"></script>
 
 </body>
+<script>
+    function test() {
+        alert('test:'+vm.datas)
+    }
+    var vm;
+    vm = new Vue({
+        el: '#vm-id',
+        data: {
+            datas: [],
+            arr:['a','b','c'],
+            user:''
+        },
+        methods: {
+            testarr:function () {
+              vm.arr.forEach(function (a) {
+                  console.log('arr:'+a)
+              })
+            },
+            showdatas: function () {
+                vm.datas.forEach(function (u){
+                console.log('name:'+u.name)
+            })
+            },
+            submit:function () {
+                $.ajax({
+                    url:'/userSubmit',
+                    type:'POST',
+                    async:false,
+                    data:JSON.stringify(vm.user),
+                    contentType:'application/json'
+                })
+            }
+        },
+        beforeCreate:function () {
+          console.log('beforeCreate')
+        },
+        created: function () {
+            console.log('created:' + this.datas);
+        },
+        beforeMount:function () {
+            console.log('beforeMount')
+        },
+        mounted: function () {
+            console.log('mounted:' + this.datas)
+        },
+        beforeUpdate:function () {
+            console.log('beforeUpdate')
+        },
+        update:function () {
+            console.log('update')
+        },
+        beforeDestory:function () {
+            console.log('beforeDestory')
+        },
+        destory:function () {
+            console.log('destory')
+        }
+    });
+    vm.$nextTick(function () {
+        this.datas=JSON.parse($('#usersJSON').val())
+        this.user = JSON.parse($('#userJSON').val())
+    })
+</script>
 </html>
