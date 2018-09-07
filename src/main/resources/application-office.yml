@@ -11,14 +11,10 @@ spring:
   thymeleaf:
     cache: false
   redis:
-      host: localhost
-      port: 6379
-      database: 1
-      pool:
-        max-active: 8
-        max-wait: 1
-        max-idle: 500
-        min-idle: 0
+      host: 192.168.169.200
+      port: 6378
+      password: myRedis
+      database: 3
 
   session:
       store-type: redis

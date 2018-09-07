@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml"
+      xmlns:v-on="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>用户管理</title>
 </head>
 <body>
 <div id="vm-id">
+    <p>-----------------------------</p>
+    <test-title v-bind:title="vtitle" v-bind:message="vmessage"></test-title>
+    <p>----------------------------</p>
     <form id="form-id" type="post" enctype="multipart/form-data">
         <table>
             <tr>
@@ -17,6 +21,10 @@
         <button @click="testarr">testarr</button>
         <span>名字：</span><input  type="text" v-model="user.name">
         <span>年龄：</span><input type="number" v-model="user.age">
+        <!--v-bind同步属性，将title属性和user.name属性同步-->
+        <span>v-bind测试</span><input type="text" v-bind:title="user.name">
+        <!--用v-on绑定事件-->
+        <button type="button" v-on:click="clickEvent">v-on测试</button>
         <input  type="file" id="file-1">
         <input  type="file" id="file-2">
 
@@ -30,6 +38,7 @@
 <script type="text/javascript" th:src="${'/lib/jquery.min.js'}"></script>
 <script type="text/javascript" th:src="${'/lib/bootstrap/js/bootstrap.min.js'}"></script>
 <script type="text/javascript" th:src="${'/lib/vue2/vue.min.js'}"></script>
+<script type="text/javascript" th:src="${'/js/vue-test/vue-component.js'}"></script>
 
 </body>
 <script>
@@ -40,6 +49,8 @@
     vm = new Vue({
         el: '#vm-id',
         data: {
+            vtitle: '标题',
+            vmessage: '文本内容',
             datas: [],
             arr:['a','b','c'],
             user:'',
@@ -47,6 +58,9 @@
             zp:''
         },
         methods: {
+            clickEvent:function () {
+                alert(vm.user.name)
+            },
             testarr:function () {
               vm.arr.forEach(function (a) {
                   console.log('arr:'+a)
@@ -128,6 +142,10 @@
             console.log('destory')
         }
     });
+    <!--监测vm实例的vtitle属性的变化；newval:变化后的值；oldval:变化前的值-->
+    vm.$watch('vtitle',function (newval,oldval) {
+        alert(oldval+'---->'+newval)
+    })
 
     $('#form-id').submit(function () {
         var file1=$('#file-1').get(0).files[0];
