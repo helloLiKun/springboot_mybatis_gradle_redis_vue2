@@ -6,13 +6,11 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import example.user.entity.User;
 import example.user.service.UserService;
 import example.util.AjaxResponse;
-import org.omg.Messaging.SYNC_WITH_TRANSPORT;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
 import java.util.List;
 
 /**
@@ -26,6 +24,7 @@ public class UserController {
         map.put("users",list);
         map.put("userJSON",JSON.toJSONString(new User(), SerializerFeature.WriteMapNullValue));
         map.put("usersJSON", JSON.toJSONString(list));
+
         return "user/list";
     }
 
