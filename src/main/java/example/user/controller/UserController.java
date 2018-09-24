@@ -21,10 +21,7 @@ public class UserController {
     @RequestMapping("/test")
     public String userList(ModelMap map){
         List<User> list=userService.getList();
-        map.put("users",list);
-        map.put("userJSON",JSON.toJSONString(new User(), SerializerFeature.WriteMapNullValue));
         map.put("usersJSON", JSON.toJSONString(list));
-
         return "user/list";
     }
 
