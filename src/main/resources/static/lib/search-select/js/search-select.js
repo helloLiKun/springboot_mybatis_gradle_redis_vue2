@@ -13,23 +13,33 @@ function  SearchSelect(data) {
     if (!data.options) {
         console.log('选项为空')
     }
-    self.id = data.id;
-    self.options = data.options;
-    self.divElement = $('#' + self.id);
-    self.inputElement = $('#' + self.id + ' input');
-    self.ulElement=$('#'+self.id+' ul');
-    self.flushLis=function () {
-        self.ulElement.html('');
-        self.ulElement.height(0);
+    var id = data.id;
+    var options = data.options;
+    var divElement = $('#' + id);
+    var inputElement = $('#' + id + ' input');
+    var ulElement=$('#'+id+' ul');
+    var lis =$('#'+id+' ul > li');
+    var flushLis=function () {
+        ulElement.html('');
+        ulElement.height(0);
         if(data.options!=null && data.options.length>0){
             for(var i=0;i<data.options.length;i++){
                 var option=data.options[i];
-                self.ulElement.append("<li "+option.val+">"+option.text+"</li>")
+                ulElement.append("<li "+option.val+">"+option.text+"</li>")
             }
-            $('#'+self.id+' ul > li').width(self.ulElement.width()+42);
+            lis.width(ulElement.width());
+            alert(ulElement.width);
+            $('#'+id+' ul > li').mouseenter(function(){
+                alert('mouseenter')
+                lis.css("background-color","yellow");
+            });
+            $('#'+id+' ul > li').mouseleave(function(){
+                alert('mouseleave');
+                lis.css("background-color","white");
+            });
             var liNum=data.options.length>5?5:data.options.length;
-            self.ulElement.height(liNum*liHeight+30);
+            ulElement.height(liNum*liHeight+15);
         }
     }
-    self.flushLis();
+    flushLis();
 }
