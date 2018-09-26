@@ -25,18 +25,9 @@ function  SearchSelect(data) {
         if(data.options!=null && data.options.length>0){
             for(var i=0;i<data.options.length;i++){
                 var option=data.options[i];
-                ulElement.append("<li "+option.val+">"+option.text+"</li>")
+                ulElement.append("<li value='"+option.val+"'>"+option.text+"</li>")
             }
             lis.width(ulElement.width());
-            alert(ulElement.width);
-            $('#'+id+' ul > li').mouseenter(function(){
-                alert('mouseenter')
-                lis.css("background-color","yellow");
-            });
-            $('#'+id+' ul > li').mouseleave(function(){
-                alert('mouseleave');
-                lis.css("background-color","white");
-            });
             var liNum=data.options.length>5?5:data.options.length;
             ulElement.height(liNum*liHeight+15);
         }

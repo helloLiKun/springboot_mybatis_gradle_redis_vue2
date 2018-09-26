@@ -5,13 +5,13 @@
     font-size: 16px;
 }
 
-.search-select-cls input{
+.search-select-cls > input{
     width: 100%;
     height: 50px;
     position: relative;
 }
 
-.search-select-cls ul{
+.search-select-cls > ul{
     width: 100%;
     height: 50px;
     position: relative;
@@ -19,10 +19,14 @@
     overflow: auto;
 }
 
-.search-select-cls ul > li{
+.search-select-cls > ul > li{
     /*设置不显示圆点*/
     list-style: none;
     position: relative;
     left: -40px;
     height: 30px;
+}
+
+.search-select-cls ul > li:hover{
+    background-color: yellow;
 }
