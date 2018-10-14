@@ -23,6 +23,7 @@
         </div>
 
     </form>
+    <button @click="getChecked">获取选中值</button>
     <input type="hidden" th:value="${usersJSON}" id="usersJSON">
 </div>
 <script type="text/javascript" th:src="${'/lib/jquery.min.js'}"></script>
@@ -33,12 +34,22 @@
 </body>
 <script>
     var vm;
+    var search1=null;
+    var search2=null;
     vm = new Vue({
         el: '#vm-id',
         data: {
             users:[]
         },
         methods: {
+            getChecked:function () {
+                if(search1!=null){
+                    alert('search1-val:'+search1.checked)
+                }
+                if(search2!=null){
+                    alert('search2-val:'+search2.checked);
+                }
+            }
         }
     });
     <!--监测vm实例的vtitle属性的变化；newval:变化后的值；oldval:变化前的值-->
@@ -82,7 +93,7 @@
             {val:'234',text:'bcd'},
             {val:'234',text:'bcd'},
             {val:'345',text:'cde'}];
-        var searchSelect=new SearchSelect(data);
+        search1=new SearchSelect(data);
 
         var data1=new Object();
         data1.id="test1Id1";
@@ -93,7 +104,7 @@
             {val:'234',text:'bcd'},
             {val:'234',text:'bcd'},
             {val:'345',text:'cde'}];
-        var searchSelect1=new SearchSelect(data1);
+        search2=new SearchSelect(data1);
     })
 </script>
 </html>

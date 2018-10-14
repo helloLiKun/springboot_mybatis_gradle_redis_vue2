@@ -2,11 +2,18 @@
  * Created by Administrator on 2018/9/24 0024.
  */
 $("body").click(function(){
-    $('.search-select-cls > div').css('display','none');
+    hide($('.search-select-cls > div'));
 });
+function show(dom) {
+    dom.css('display','block');
+}
+function hide(dom) {
+    dom.css('display','none');
+}
 function  SearchSelect(data) {
     var liHeight=30;
     var self = this;
+    self.checked=null;
     if (!data.id) {
         console.log('id不能为空');
         return;
@@ -24,13 +31,13 @@ function  SearchSelect(data) {
     var trElement=$('#'+id+' > div > table > tr');
     var width=divElement.width();
     divElement.click(function (e) {
-        optionsElement.css('display','block');
+        show(optionsElement);
         e.cancelBubble=true;
         e.stopPropagation();
         $('.search-select-cls').each(function () {
             var thisid=$(this).attr("id");
             if(thisid!=id){
-                $('#'+thisid+' > div').css('display','none');
+               hide( $('#'+thisid+' > div'))
             }
         })
     })
@@ -39,8 +46,11 @@ function  SearchSelect(data) {
         tabElement.height(0);
         if(data.options!=null && data.options.length>0){
             for(var i=0;i<data.options.length;i++){
+                var optionId="search_option_"+id+"_"+i;
                 var option=data.options[i];
-                tabElement.append("<tr><td click='"+trclick()+"' value='"+option.val+"'>"+option.text+"</td></tr>")
+                tabElement.append("<tr id='"+optionId+"'><td value='"+option.val+"'>"+option.text+"</td></tr>")
+                var obj = {val:option.val,txt:option.text};
+                $('#'+optionId).click(obj,trclick)
             }
             optionsElement.width(width);
             tabElement.width(width-2);
@@ -50,7 +60,10 @@ function  SearchSelect(data) {
         }
     }
     function trclick(e) {
-        console.log('--click  val---------->'+e)
+        e.stopPropagation();
+        inputElement.val(e.data.txt);
+        self.checked=e.data.val;
+        hide(optionsElement);
     }
     flushTrs();
 }
