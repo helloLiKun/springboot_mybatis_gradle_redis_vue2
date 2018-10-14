@@ -11,22 +11,20 @@
     position: relative;
 }
 
-.search-select-cls > ul{
+.search-select-cls  > div{
     width: 100%;
     height: 50px;
     position: relative;
     border:1px solid #e0e0e0;
     overflow: auto;
+    display: none;
+    background-color: whitesmoke;
+    z-index: 1;
 }
-
-.search-select-cls > ul > li{
-    /*设置不显示圆点*/
-    list-style: none;
-    position: relative;
-    left: -40px;
+.search-select-cls > div > table > tr{
     height: 30px;
 }
 
-.search-select-cls ul > li:hover{
+.search-select-cls > div >  table > tr:hover{
     background-color: yellow;
 }
