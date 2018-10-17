@@ -2,7 +2,7 @@
  * Created by Administrator on 2018/9/24 0024.
  */
 $("body").click(function(){
-    hide($('.search-select-cls > div'));
+    hide($('.search-select-cls > .options-cls'));
 });
 function show(dom) {
     dom.css('display','block');
@@ -18,7 +18,7 @@ function  SearchSelect(data) {
         console.log('id不能为空');
         return;
     }
-    $('#' + data.id).append("<input><div><table></table></div>");
+    $('#' + data.id).append("<div class='show-cls'></div><input><div class='options-cls'><table></table></div>");
     if (!data.options) {
         console.log('选项为空')
     }
@@ -26,9 +26,9 @@ function  SearchSelect(data) {
     var options = data.options;
     var divElement = $('#' + id);
     var inputElement = $('#' + id + ' > input');
-    var optionsElement=$('#'+id+' > div');
-    var tabElement=$('#'+id+' > div > table');
-    var trElement=$('#'+id+' > div > table > tr');
+    var optionsElement=$('#'+id+' > .options-cls');
+    var tabElement=$('#'+id+' > .options-cls > table');
+    var trElement=$('#'+id+' > .options-cls > table > tr');
     var width=divElement.width();
     divElement.click(function (e) {
         show(optionsElement);
@@ -37,7 +37,7 @@ function  SearchSelect(data) {
         $('.search-select-cls').each(function () {
             var thisid=$(this).attr("id");
             if(thisid!=id){
-               hide( $('#'+thisid+' > div'))
+               hide( $('#'+thisid+' > .options-cls'))
             }
         })
     })

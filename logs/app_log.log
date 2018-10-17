@@ -15512,3 +15512,501 @@ Caused by: java.net.ConnectException: Connection refused: connect
 2018-10-15 00:14:33.824  INFO 11412 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
 2018-10-15 00:14:33.853  INFO 11412 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
 2018-10-15 00:14:34.055  INFO 11412 --- [XNIO-2 task-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-10-17 17:24:00.817  INFO 10388 --- [main] example.Application                      : Starting Application on 4DQDOG1LGQFV9AC with PID 10388 (D:\IDEAWORK\springboot_mybatis_gradle_redis_vue2\build\classes\main started by Administrator in D:\IDEAWORK\springboot_mybatis_gradle_redis_vue2)
+2018-10-17 17:24:00.822  INFO 10388 --- [main] example.Application                      : The following profiles are active: office
+2018-10-17 17:24:01.145  INFO 10388 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6f7923a5: startup date [Wed Oct 17 17:24:01 CST 2018]; root of context hierarchy
+2018-10-17 17:24:02.540  INFO 10388 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-17 17:24:02.608  INFO 10388 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'propertySourcesPlaceholderConfigurer' with a different definition: replacing [Root bean: class [org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/context/PropertyPlaceholderAutoConfiguration.class]] with [Root bean: class [org.springframework.boot.autoconfigure.session.RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]]
+2018-10-17 17:24:04.338  INFO 10388 --- [main] org.xnio                                 : XNIO version 3.3.6.Final
+2018-10-17 17:24:04.359  INFO 10388 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.6.Final
+2018-10-17 17:24:04.739  WARN 10388 --- [main] io.undertow.websockets.jsr               : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-10-17 17:24:04.739  WARN 10388 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-10-17 17:24:04.765  INFO 10388 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2018-10-17 17:24:04.766  INFO 10388 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3624 ms
+2018-10-17 17:24:05.300  INFO 10388 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-10-17 17:24:05.305  INFO 10388 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-17 17:24:05.306  INFO 10388 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'springSessionRepositoryFilter' to: [/*]
+2018-10-17 17:24:05.306  INFO 10388 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-17 17:24:05.306  INFO 10388 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-10-17 17:24:05.307  INFO 10388 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-17 17:24:05.307  INFO 10388 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'resourceUrlEncodingFilter' to: [/*]
+2018-10-17 17:24:07.502  INFO 10388 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6f7923a5: startup date [Wed Oct 17 17:24:01 CST 2018]; root of context hierarchy
+2018-10-17 17:24:07.588  INFO 10388 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/searchSelect]}" onto public java.lang.String example.search_select.controller.SearchSelectController.toSearchSelect(org.springframework.ui.ModelMap)
+2018-10-17 17:24:07.590  INFO 10388 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/userSubmit]}" onto public java.lang.String example.user.controller.UserController.userSubmit(example.user.entity.User)
+2018-10-17 17:24:07.591  INFO 10388 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/formdataSubmit]}" onto public java.lang.String example.user.controller.UserController.formDataSubmit(java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2018-10-17 17:24:07.591  INFO 10388 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/formMultiple]}" onto public java.lang.String example.user.controller.UserController.formMultiple(java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2018-10-17 17:24:07.591  INFO 10388 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test]}" onto public java.lang.String example.user.controller.UserController.userList(org.springframework.ui.ModelMap)
+2018-10-17 17:24:07.593  INFO 10388 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-10-17 17:24:07.594  INFO 10388 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-17 17:24:07.642  INFO 10388 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-17 17:24:07.642  INFO 10388 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-17 17:24:07.692  INFO 10388 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-17 17:24:09.067  INFO 10388 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-10-17 17:24:09.073  INFO 10388 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-10-17 17:24:09.078  INFO 10388 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-10-17 17:24:09.102  INFO 10388 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-10-17 17:24:09.114  INFO 10388 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2018-10-17 17:24:09.182  INFO 10388 --- [main] b.c.e.u.UndertowEmbeddedServletContainer : Undertow started on port(s) 8809 (http)
+2018-10-17 17:24:09.188  INFO 10388 --- [main] example.Application                      : Started Application in 9.336 seconds (JVM running for 11.597)
+2018-10-17 17:25:27.770  INFO 10388 --- [XNIO-2 task-1] io.undertow.servlet                      : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-10-17 17:25:27.770  INFO 10388 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-10-17 17:25:27.791  INFO 10388 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2018-10-17 17:25:28.085 ERROR 10388 --- [XNIO-2 task-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} init error
+
+java.sql.SQLException: oracle.jdbc.OracleDriver
+	at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:600) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:817) [druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1229) [druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1225) [druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:90) [druid-1.1.10.jar:1.1.10]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111) [spring-jdbc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77) [spring-jdbc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:82) [mybatis-spring-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:68) [mybatis-spring-1.3.1.jar:1.3.1]
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:336) [mybatis-3.4.4.jar:3.4.4]
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:84) [mybatis-3.4.4.jar:3.4.4]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62) [mybatis-3.4.4.jar:3.4.4]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324) [mybatis-3.4.4.jar:3.4.4]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) [mybatis-3.4.4.jar:3.4.4]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) [mybatis-3.4.4.jar:3.4.4]
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:142) [pagehelper-5.0.3.jar:na]
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61) [mybatis-3.4.4.jar:3.4.4]
+	at com.sun.proxy.$Proxy74.query(Unknown Source) [na:na]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148) [mybatis-3.4.4.jar:3.4.4]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141) [mybatis-3.4.4.jar:3.4.4]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_121]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_121]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433) [mybatis-spring-1.3.1.jar:1.3.1]
+	at com.sun.proxy.$Proxy57.selectList(Unknown Source) [na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230) [mybatis-spring-1.3.1.jar:1.3.1]
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:137) [mybatis-3.4.4.jar:3.4.4]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:75) [mybatis-3.4.4.jar:3.4.4]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59) [mybatis-3.4.4.jar:3.4.4]
+	at com.sun.proxy.$Proxy58.selectByExample(Unknown Source) [na:na]
+	at example.user.service.impl.UserServiceImpl.getList(UserServiceImpl.java:21) [main/:na]
+	at example.search_select.controller.SearchSelectController.toSearchSelect(SearchSelectController.java:21) [main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_121]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_121]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) [spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) [spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) [spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) [spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) [spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) [spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) [spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) [spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) [spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) [spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687) [javax.servlet-api-3.1.0.jar:3.1.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) [spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [javax.servlet-api-3.1.0.jar:3.1.0]
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:85) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:59) [spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105) [spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) [spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at org.springframework.session.web.http.SessionRepositoryFilter.doFilterInternal(SessionRepositoryFilter.java:167) [spring-session-1.3.1.RELEASE.jar:na]
+	at org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:80) [spring-session-1.3.1.RELEASE.jar:na]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) [spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) [undertow-core-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46) [undertow-core-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60) [undertow-core-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43) [undertow-core-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) [undertow-core-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) [undertow-core-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:211) [undertow-core-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:809) [undertow-core-1.4.15.Final.jar:1.4.15.Final]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_121]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_121]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_121]
+Caused by: java.lang.ClassNotFoundException: oracle.jdbc.OracleDriver
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_121]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_121]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331) ~[na:1.8.0_121]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_121]
+	at java.lang.Class.forName0(Native Method) ~[na:1.8.0_121]
+	at java.lang.Class.forName(Class.java:264) ~[na:1.8.0_121]
+	at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:598) ~[druid-1.1.10.jar:1.1.10]
+	... 101 common frames omitted
+
+2018-10-17 17:25:28.098 ERROR 10388 --- [XNIO-2 task-1] io.undertow.request                      : UT005023: Exception handling request to /searchSelect
+
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: oracle.jdbc.OracleDriver
+### The error may exist in file [D:\IDEAWORK\springboot_mybatis_gradle_redis_vue2\build\resources\main\example\xml\user\UserMapper.xml]
+### The error may involve example.user.mapper.UserMapper.selectByExample
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: oracle.jdbc.OracleDriver
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687) ~[javax.servlet-api-3.1.0.jar:3.1.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) ~[javax.servlet-api-3.1.0.jar:3.1.0]
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:85) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:59) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105) ~[spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at org.springframework.session.web.http.SessionRepositoryFilter.doFilterInternal(SessionRepositoryFilter.java:167) ~[spring-session-1.3.1.RELEASE.jar:na]
+	at org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:80) ~[spring-session-1.3.1.RELEASE.jar:na]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) ~[undertow-core-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46) ~[undertow-core-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60) ~[undertow-core-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43) ~[undertow-core-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) ~[undertow-core-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) ~[undertow-core-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81) ~[undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104) [undertow-servlet-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:211) [undertow-core-1.4.15.Final.jar:1.4.15.Final]
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:809) [undertow-core-1.4.15.Final.jar:1.4.15.Final]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_121]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_121]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_121]
+Caused by: org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: oracle.jdbc.OracleDriver
+### The error may exist in file [D:\IDEAWORK\springboot_mybatis_gradle_redis_vue2\build\resources\main\example\xml\user\UserMapper.xml]
+### The error may involve example.user.mapper.UserMapper.selectByExample
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: oracle.jdbc.OracleDriver
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:77) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at com.sun.proxy.$Proxy57.selectList(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:137) ~[mybatis-3.4.4.jar:3.4.4]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:75) ~[mybatis-3.4.4.jar:3.4.4]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59) ~[mybatis-3.4.4.jar:3.4.4]
+	at com.sun.proxy.$Proxy58.selectByExample(Unknown Source) ~[na:na]
+	at example.user.service.impl.UserServiceImpl.getList(UserServiceImpl.java:21) ~[main/:na]
+	at example.search_select.controller.SearchSelectController.toSearchSelect(SearchSelectController.java:21) ~[main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_121]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_121]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) ~[spring-web-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	... 56 common frames omitted
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: oracle.jdbc.OracleDriver
+### The error may exist in file [D:\IDEAWORK\springboot_mybatis_gradle_redis_vue2\build\resources\main\example\xml\user\UserMapper.xml]
+### The error may involve example.user.mapper.UserMapper.selectByExample
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: oracle.jdbc.OracleDriver
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30) ~[mybatis-3.4.4.jar:3.4.4]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:150) ~[mybatis-3.4.4.jar:3.4.4]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141) ~[mybatis-3.4.4.jar:3.4.4]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_121]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_121]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	... 77 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is java.sql.SQLException: oracle.jdbc.OracleDriver
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80) ~[spring-jdbc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:82) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:68) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:336) ~[mybatis-3.4.4.jar:3.4.4]
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:84) ~[mybatis-3.4.4.jar:3.4.4]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62) ~[mybatis-3.4.4.jar:3.4.4]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324) ~[mybatis-3.4.4.jar:3.4.4]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) ~[mybatis-3.4.4.jar:3.4.4]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) ~[mybatis-3.4.4.jar:3.4.4]
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:142) ~[pagehelper-5.0.3.jar:na]
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61) ~[mybatis-3.4.4.jar:3.4.4]
+	at com.sun.proxy.$Proxy74.query(Unknown Source) ~[na:na]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148) ~[mybatis-3.4.4.jar:3.4.4]
+	... 83 common frames omitted
+Caused by: java.sql.SQLException: oracle.jdbc.OracleDriver
+	at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:600) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:817) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1229) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1225) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:90) ~[druid-1.1.10.jar:1.1.10]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111) ~[spring-jdbc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77) ~[spring-jdbc-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	... 95 common frames omitted
+Caused by: java.lang.ClassNotFoundException: oracle.jdbc.OracleDriver
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_121]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_121]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331) ~[na:1.8.0_121]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_121]
+	at java.lang.Class.forName0(Native Method) ~[na:1.8.0_121]
+	at java.lang.Class.forName(Class.java:264) ~[na:1.8.0_121]
+	at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:598) ~[druid-1.1.10.jar:1.1.10]
+	... 101 common frames omitted
+
+2018-10-17 17:28:34.857  INFO 9604 --- [main] example.Application                      : Starting Application on 4DQDOG1LGQFV9AC with PID 9604 (D:\IDEAWORK\springboot_mybatis_gradle_redis_vue2\build\classes\main started by Administrator in D:\IDEAWORK\springboot_mybatis_gradle_redis_vue2)
+2018-10-17 17:28:34.861  INFO 9604 --- [main] example.Application                      : The following profiles are active: office
+2018-10-17 17:28:35.209  INFO 9604 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@37e4d7bb: startup date [Wed Oct 17 17:28:35 CST 2018]; root of context hierarchy
+2018-10-17 17:28:36.365  INFO 9604 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-17 17:28:36.427  INFO 9604 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'propertySourcesPlaceholderConfigurer' with a different definition: replacing [Root bean: class [org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/context/PropertyPlaceholderAutoConfiguration.class]] with [Root bean: class [org.springframework.boot.autoconfigure.session.RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]]
+2018-10-17 17:28:38.030  INFO 9604 --- [main] org.xnio                                 : XNIO version 3.3.6.Final
+2018-10-17 17:28:38.051  INFO 9604 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.6.Final
+2018-10-17 17:28:38.157  WARN 9604 --- [main] io.undertow.websockets.jsr               : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-10-17 17:28:38.158  WARN 9604 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-10-17 17:28:38.183  INFO 9604 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2018-10-17 17:28:38.183  INFO 9604 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2977 ms
+2018-10-17 17:28:38.547  INFO 9604 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-10-17 17:28:38.552  INFO 9604 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-17 17:28:38.553  INFO 9604 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'springSessionRepositoryFilter' to: [/*]
+2018-10-17 17:28:38.554  INFO 9604 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-17 17:28:38.554  INFO 9604 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-10-17 17:28:38.554  INFO 9604 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-17 17:28:38.554  INFO 9604 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'resourceUrlEncodingFilter' to: [/*]
+2018-10-17 17:28:39.592  INFO 9604 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@37e4d7bb: startup date [Wed Oct 17 17:28:35 CST 2018]; root of context hierarchy
+2018-10-17 17:28:39.680  INFO 9604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/searchSelect]}" onto public java.lang.String example.search_select.controller.SearchSelectController.toSearchSelect(org.springframework.ui.ModelMap)
+2018-10-17 17:28:39.682  INFO 9604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/formdataSubmit]}" onto public java.lang.String example.user.controller.UserController.formDataSubmit(java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2018-10-17 17:28:39.682  INFO 9604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test]}" onto public java.lang.String example.user.controller.UserController.userList(org.springframework.ui.ModelMap)
+2018-10-17 17:28:39.683  INFO 9604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/userSubmit]}" onto public java.lang.String example.user.controller.UserController.userSubmit(example.user.entity.User)
+2018-10-17 17:28:39.683  INFO 9604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/formMultiple]}" onto public java.lang.String example.user.controller.UserController.formMultiple(java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2018-10-17 17:28:39.685  INFO 9604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-10-17 17:28:39.686  INFO 9604 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-17 17:28:39.736  INFO 9604 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-17 17:28:39.736  INFO 9604 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-17 17:28:39.788  INFO 9604 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-17 17:28:40.901  INFO 9604 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-10-17 17:28:40.904  INFO 9604 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-10-17 17:28:40.910  INFO 9604 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-10-17 17:28:40.916  INFO 9604 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-10-17 17:28:40.930  INFO 9604 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2018-10-17 17:28:40.990  INFO 9604 --- [main] b.c.e.u.UndertowEmbeddedServletContainer : Undertow started on port(s) 8809 (http)
+2018-10-17 17:28:40.997  INFO 9604 --- [main] example.Application                      : Started Application in 6.742 seconds (JVM running for 7.553)
+2018-10-17 17:30:09.716  INFO 9604 --- [XNIO-2 task-1] io.undertow.servlet                      : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-10-17 17:30:09.716  INFO 9604 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-10-17 17:30:09.736  INFO 9604 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2018-10-17 17:30:09.971  INFO 9604 --- [XNIO-2 task-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-10-17 17:41:17.488  INFO 1088 --- [main] example.Application                      : Starting Application on 4DQDOG1LGQFV9AC with PID 1088 (D:\IDEAWORK\springboot_mybatis_gradle_redis_vue2\build\classes\main started by Administrator in D:\IDEAWORK\springboot_mybatis_gradle_redis_vue2)
+2018-10-17 17:41:17.492  INFO 1088 --- [main] example.Application                      : The following profiles are active: office
+2018-10-17 17:41:17.837  INFO 1088 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@37e4d7bb: startup date [Wed Oct 17 17:41:17 CST 2018]; root of context hierarchy
+2018-10-17 17:41:18.982  INFO 1088 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-17 17:41:19.042  INFO 1088 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'propertySourcesPlaceholderConfigurer' with a different definition: replacing [Root bean: class [org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/context/PropertyPlaceholderAutoConfiguration.class]] with [Root bean: class [org.springframework.boot.autoconfigure.session.RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]]
+2018-10-17 17:41:20.657  INFO 1088 --- [main] org.xnio                                 : XNIO version 3.3.6.Final
+2018-10-17 17:41:20.678  INFO 1088 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.6.Final
+2018-10-17 17:41:20.782  WARN 1088 --- [main] io.undertow.websockets.jsr               : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-10-17 17:41:20.782  WARN 1088 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-10-17 17:41:20.807  INFO 1088 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2018-10-17 17:41:20.807  INFO 1088 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2979 ms
+2018-10-17 17:41:21.163  INFO 1088 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-10-17 17:41:21.168  INFO 1088 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-17 17:41:21.170  INFO 1088 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'springSessionRepositoryFilter' to: [/*]
+2018-10-17 17:41:21.170  INFO 1088 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-17 17:41:21.170  INFO 1088 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-10-17 17:41:21.170  INFO 1088 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-17 17:41:21.170  INFO 1088 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'resourceUrlEncodingFilter' to: [/*]
+2018-10-17 17:41:22.241  INFO 1088 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@37e4d7bb: startup date [Wed Oct 17 17:41:17 CST 2018]; root of context hierarchy
+2018-10-17 17:41:22.327  INFO 1088 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/searchSelect]}" onto public java.lang.String example.search_select.controller.SearchSelectController.toSearchSelect(org.springframework.ui.ModelMap)
+2018-10-17 17:41:22.329  INFO 1088 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test]}" onto public java.lang.String example.user.controller.UserController.userList(org.springframework.ui.ModelMap)
+2018-10-17 17:41:22.329  INFO 1088 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/formdataSubmit]}" onto public java.lang.String example.user.controller.UserController.formDataSubmit(java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2018-10-17 17:41:22.329  INFO 1088 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/userSubmit]}" onto public java.lang.String example.user.controller.UserController.userSubmit(example.user.entity.User)
+2018-10-17 17:41:22.330  INFO 1088 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/formMultiple]}" onto public java.lang.String example.user.controller.UserController.formMultiple(java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2018-10-17 17:41:22.332  INFO 1088 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-10-17 17:41:22.332  INFO 1088 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-17 17:41:22.381  INFO 1088 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-17 17:41:22.382  INFO 1088 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-17 17:41:22.436  INFO 1088 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-17 17:41:23.505  INFO 1088 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-10-17 17:41:23.507  INFO 1088 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-10-17 17:41:23.512  INFO 1088 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-10-17 17:41:23.518  INFO 1088 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-10-17 17:41:23.531  INFO 1088 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2018-10-17 17:41:23.590  INFO 1088 --- [main] b.c.e.u.UndertowEmbeddedServletContainer : Undertow started on port(s) 8809 (http)
+2018-10-17 17:41:23.596  INFO 1088 --- [main] example.Application                      : Started Application in 6.753 seconds (JVM running for 7.515)
+2018-10-17 17:42:44.727  INFO 1088 --- [XNIO-2 task-1] io.undertow.servlet                      : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-10-17 17:42:44.727  INFO 1088 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-10-17 17:42:44.751  INFO 1088 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2018-10-17 17:42:44.894  INFO 1088 --- [XNIO-2 task-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-10-17 17:46:21.955  INFO 7880 --- [main] example.Application                      : Starting Application on 4DQDOG1LGQFV9AC with PID 7880 (D:\IDEAWORK\springboot_mybatis_gradle_redis_vue2\build\classes\main started by Administrator in D:\IDEAWORK\springboot_mybatis_gradle_redis_vue2)
+2018-10-17 17:46:21.959  INFO 7880 --- [main] example.Application                      : The following profiles are active: office
+2018-10-17 17:46:22.306  INFO 7880 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@37e4d7bb: startup date [Wed Oct 17 17:46:22 CST 2018]; root of context hierarchy
+2018-10-17 17:46:23.540  INFO 7880 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-17 17:46:23.615  INFO 7880 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'propertySourcesPlaceholderConfigurer' with a different definition: replacing [Root bean: class [org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/context/PropertyPlaceholderAutoConfiguration.class]] with [Root bean: class [org.springframework.boot.autoconfigure.session.RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]]
+2018-10-17 17:46:25.183  INFO 7880 --- [main] org.xnio                                 : XNIO version 3.3.6.Final
+2018-10-17 17:46:25.216  INFO 7880 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.6.Final
+2018-10-17 17:46:25.328  WARN 7880 --- [main] io.undertow.websockets.jsr               : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-10-17 17:46:25.329  WARN 7880 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-10-17 17:46:25.359  INFO 7880 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2018-10-17 17:46:25.359  INFO 7880 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3056 ms
+2018-10-17 17:46:25.721  INFO 7880 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-10-17 17:46:25.726  INFO 7880 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-17 17:46:25.727  INFO 7880 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'springSessionRepositoryFilter' to: [/*]
+2018-10-17 17:46:25.728  INFO 7880 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-17 17:46:25.728  INFO 7880 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-10-17 17:46:25.728  INFO 7880 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-17 17:46:25.728  INFO 7880 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'resourceUrlEncodingFilter' to: [/*]
+2018-10-17 17:46:26.744  INFO 7880 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@37e4d7bb: startup date [Wed Oct 17 17:46:22 CST 2018]; root of context hierarchy
+2018-10-17 17:46:26.829  INFO 7880 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/searchSelect]}" onto public java.lang.String example.search_select.controller.SearchSelectController.toSearchSelect(org.springframework.ui.ModelMap)
+2018-10-17 17:46:26.831  INFO 7880 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test]}" onto public java.lang.String example.user.controller.UserController.userList(org.springframework.ui.ModelMap)
+2018-10-17 17:46:26.831  INFO 7880 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/userSubmit]}" onto public java.lang.String example.user.controller.UserController.userSubmit(example.user.entity.User)
+2018-10-17 17:46:26.832  INFO 7880 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/formdataSubmit]}" onto public java.lang.String example.user.controller.UserController.formDataSubmit(java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2018-10-17 17:46:26.832  INFO 7880 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/formMultiple]}" onto public java.lang.String example.user.controller.UserController.formMultiple(java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2018-10-17 17:46:26.834  INFO 7880 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-10-17 17:46:26.835  INFO 7880 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-17 17:46:26.883  INFO 7880 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-17 17:46:26.883  INFO 7880 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-17 17:46:26.934  INFO 7880 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-17 17:46:27.977  INFO 7880 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-10-17 17:46:27.979  INFO 7880 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-10-17 17:46:27.984  INFO 7880 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-10-17 17:46:27.990  INFO 7880 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-10-17 17:46:28.005  INFO 7880 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2018-10-17 17:46:28.067  INFO 7880 --- [main] b.c.e.u.UndertowEmbeddedServletContainer : Undertow started on port(s) 8809 (http)
+2018-10-17 17:46:28.072  INFO 7880 --- [main] example.Application                      : Started Application in 6.743 seconds (JVM running for 7.582)
+2018-10-17 17:48:01.955  INFO 7880 --- [XNIO-2 task-1] io.undertow.servlet                      : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-10-17 17:48:01.956  INFO 7880 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-10-17 17:48:01.978  INFO 7880 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2018-10-17 17:48:02.121  INFO 7880 --- [XNIO-2 task-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-10-17 17:53:42.487  INFO 12600 --- [main] example.Application                      : Starting Application on 4DQDOG1LGQFV9AC with PID 12600 (D:\IDEAWORK\springboot_mybatis_gradle_redis_vue2\build\classes\main started by Administrator in D:\IDEAWORK\springboot_mybatis_gradle_redis_vue2)
+2018-10-17 17:53:42.491  INFO 12600 --- [main] example.Application                      : The following profiles are active: office
+2018-10-17 17:53:42.793  INFO 12600 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@37e4d7bb: startup date [Wed Oct 17 17:53:42 CST 2018]; root of context hierarchy
+2018-10-17 17:53:43.882  INFO 12600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-17 17:53:43.948  INFO 12600 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'propertySourcesPlaceholderConfigurer' with a different definition: replacing [Root bean: class [org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/context/PropertyPlaceholderAutoConfiguration.class]] with [Root bean: class [org.springframework.boot.autoconfigure.session.RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]]
+2018-10-17 17:53:45.411  INFO 12600 --- [main] org.xnio                                 : XNIO version 3.3.6.Final
+2018-10-17 17:53:45.431  INFO 12600 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.6.Final
+2018-10-17 17:53:45.534  WARN 12600 --- [main] io.undertow.websockets.jsr               : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-10-17 17:53:45.534  WARN 12600 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-10-17 17:53:45.561  INFO 12600 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2018-10-17 17:53:45.561  INFO 12600 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2771 ms
+2018-10-17 17:53:45.918  INFO 12600 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-10-17 17:53:45.924  INFO 12600 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-17 17:53:45.925  INFO 12600 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'springSessionRepositoryFilter' to: [/*]
+2018-10-17 17:53:45.926  INFO 12600 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-17 17:53:45.926  INFO 12600 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-10-17 17:53:45.926  INFO 12600 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-17 17:53:45.926  INFO 12600 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'resourceUrlEncodingFilter' to: [/*]
+2018-10-17 17:53:46.933  INFO 12600 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@37e4d7bb: startup date [Wed Oct 17 17:53:42 CST 2018]; root of context hierarchy
+2018-10-17 17:53:47.021  INFO 12600 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/searchSelect]}" onto public java.lang.String example.search_select.controller.SearchSelectController.toSearchSelect(org.springframework.ui.ModelMap)
+2018-10-17 17:53:47.023  INFO 12600 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test]}" onto public java.lang.String example.user.controller.UserController.userList(org.springframework.ui.ModelMap)
+2018-10-17 17:53:47.023  INFO 12600 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/userSubmit]}" onto public java.lang.String example.user.controller.UserController.userSubmit(example.user.entity.User)
+2018-10-17 17:53:47.023  INFO 12600 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/formdataSubmit]}" onto public java.lang.String example.user.controller.UserController.formDataSubmit(java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2018-10-17 17:53:47.024  INFO 12600 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/formMultiple]}" onto public java.lang.String example.user.controller.UserController.formMultiple(java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2018-10-17 17:53:47.026  INFO 12600 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-10-17 17:53:47.027  INFO 12600 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-17 17:53:47.073  INFO 12600 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-17 17:53:47.073  INFO 12600 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-17 17:53:47.130  INFO 12600 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-17 17:53:48.210  INFO 12600 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-10-17 17:53:48.224  INFO 12600 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-10-17 17:53:48.230  INFO 12600 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-10-17 17:53:48.235  INFO 12600 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-10-17 17:53:48.249  INFO 12600 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2018-10-17 17:53:48.302  INFO 12600 --- [main] b.c.e.u.UndertowEmbeddedServletContainer : Undertow started on port(s) 8809 (http)
+2018-10-17 17:53:48.307  INFO 12600 --- [main] example.Application                      : Started Application in 6.444 seconds (JVM running for 7.245)
+2018-10-17 17:53:54.316  INFO 12600 --- [XNIO-2 task-1] io.undertow.servlet                      : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-10-17 17:53:54.317  INFO 12600 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-10-17 17:53:54.339  INFO 12600 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2018-10-17 17:53:54.475  INFO 12600 --- [XNIO-2 task-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-10-17 17:56:34.609  INFO 4788 --- [main] example.Application                      : Starting Application on 4DQDOG1LGQFV9AC with PID 4788 (D:\IDEAWORK\springboot_mybatis_gradle_redis_vue2\build\classes\main started by Administrator in D:\IDEAWORK\springboot_mybatis_gradle_redis_vue2)
+2018-10-17 17:56:34.612  INFO 4788 --- [main] example.Application                      : The following profiles are active: office
+2018-10-17 17:56:34.973  INFO 4788 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@37e4d7bb: startup date [Wed Oct 17 17:56:34 CST 2018]; root of context hierarchy
+2018-10-17 17:56:36.034  INFO 4788 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-17 17:56:36.112  INFO 4788 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'propertySourcesPlaceholderConfigurer' with a different definition: replacing [Root bean: class [org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/context/PropertyPlaceholderAutoConfiguration.class]] with [Root bean: class [org.springframework.boot.autoconfigure.session.RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]]
+2018-10-17 17:56:37.599  INFO 4788 --- [main] org.xnio                                 : XNIO version 3.3.6.Final
+2018-10-17 17:56:37.622  INFO 4788 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.6.Final
+2018-10-17 17:56:37.732  WARN 4788 --- [main] io.undertow.websockets.jsr               : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-10-17 17:56:37.733  WARN 4788 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-10-17 17:56:37.760  INFO 4788 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2018-10-17 17:56:37.761  INFO 4788 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2791 ms
+2018-10-17 17:56:38.102  INFO 4788 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-10-17 17:56:38.108  INFO 4788 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-17 17:56:38.109  INFO 4788 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'springSessionRepositoryFilter' to: [/*]
+2018-10-17 17:56:38.110  INFO 4788 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-17 17:56:38.110  INFO 4788 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-10-17 17:56:38.110  INFO 4788 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-17 17:56:38.110  INFO 4788 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'resourceUrlEncodingFilter' to: [/*]
+2018-10-17 17:56:39.168  INFO 4788 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@37e4d7bb: startup date [Wed Oct 17 17:56:34 CST 2018]; root of context hierarchy
+2018-10-17 17:56:39.257  INFO 4788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/searchSelect]}" onto public java.lang.String example.search_select.controller.SearchSelectController.toSearchSelect(org.springframework.ui.ModelMap)
+2018-10-17 17:56:39.259  INFO 4788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test]}" onto public java.lang.String example.user.controller.UserController.userList(org.springframework.ui.ModelMap)
+2018-10-17 17:56:39.259  INFO 4788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/formdataSubmit]}" onto public java.lang.String example.user.controller.UserController.formDataSubmit(java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2018-10-17 17:56:39.260  INFO 4788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/userSubmit]}" onto public java.lang.String example.user.controller.UserController.userSubmit(example.user.entity.User)
+2018-10-17 17:56:39.260  INFO 4788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/formMultiple]}" onto public java.lang.String example.user.controller.UserController.formMultiple(java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2018-10-17 17:56:39.262  INFO 4788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-10-17 17:56:39.263  INFO 4788 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-17 17:56:39.312  INFO 4788 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-17 17:56:39.313  INFO 4788 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-17 17:56:39.369  INFO 4788 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-17 17:56:40.436  INFO 4788 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-10-17 17:56:40.441  INFO 4788 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-10-17 17:56:40.446  INFO 4788 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-10-17 17:56:40.452  INFO 4788 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-10-17 17:56:40.470  INFO 4788 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2018-10-17 17:56:40.526  INFO 4788 --- [main] b.c.e.u.UndertowEmbeddedServletContainer : Undertow started on port(s) 8809 (http)
+2018-10-17 17:56:40.531  INFO 4788 --- [main] example.Application                      : Started Application in 6.514 seconds (JVM running for 7.347)
+2018-10-17 17:56:44.688  INFO 4788 --- [XNIO-2 task-1] io.undertow.servlet                      : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-10-17 17:56:44.689  INFO 4788 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-10-17 17:56:44.708  INFO 4788 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2018-10-17 17:56:44.836  INFO 4788 --- [XNIO-2 task-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
