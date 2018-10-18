@@ -27,10 +27,8 @@
             </div>
         </div>
 
-
     </form>
     <button @click="getChecked">获取选中值</button>
-    <input type="hidden" th:value="${usersJSON}" id="usersJSON">
 </div>
 <script type="text/javascript" th:src="${'/lib/jquery.min.js'}"></script>
 <script type="text/javascript" th:src="${'/lib/bootstrap/js/bootstrap.min.js'}"></script>
@@ -89,7 +87,6 @@
         return false;
     })
     vm.$nextTick(function () {
-        vm.users=JSON.parse($('#usersJSON').val());
         var data=new Object();
         data.id="test1Id";
         data.options=[{val:'123',text:'abc'},

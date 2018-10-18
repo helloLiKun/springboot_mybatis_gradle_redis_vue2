@@ -69,6 +69,6 @@ dependencies {
             "org.springframework.session:spring-session",
             "org.springframework.boot:spring-boot-starter-data-redis",
             "commons-io:commons-io:2.5",
-            "dom4j:dom4j:1.6.1",
+            "dom4j:dom4j:1.6.1"
     )
 }

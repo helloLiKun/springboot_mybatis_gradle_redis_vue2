@@ -1,25 +1,27 @@
 .search-select-cls{
     width: 100%;
-    height: 50px;
+    height: 30px;
     position: relative;
     font-size: 16px;
+    display: none;
 }
 
 .search-select-cls > input{
     width: 100%;
-    height: 50px;
+    height: 30px;
     position: relative;
 }
-.search-select-cls > .show-cls{
+.show-cls{
     width: 100%;
-    height: 50px;
-    position: relative;
-    border:1px solid #e0e0e0;
-    overflow: auto;
-    display: none;
-    background-color: whitesmoke;
-    z-index: 1;
+    height: 30px;
+    border: none;
+    font-size: 16px;
+    line-height: 30px;
+    overflow: hidden;
+}
 
+.show-cls:hover{
+    cursor:auto
 }
 
 .search-select-cls  > .options-cls{
@@ -28,7 +30,6 @@
     position: relative;
     border:1px solid #e0e0e0;
     overflow: auto;
-    display: none;
     background-color: whitesmoke;
     z-index: 1;
 }
@@ -37,5 +38,5 @@
 }
 
 .search-select-cls > .options-cls >  table > tr:hover{
-    background-color: yellow;
+    background-color: white;
 }

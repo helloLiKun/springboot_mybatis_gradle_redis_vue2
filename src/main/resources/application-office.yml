@@ -20,7 +20,7 @@ spring:
       store-type: redis
 #web服务器端口
 server:
-  port: 8809
+  port: 8866
 
 
 
