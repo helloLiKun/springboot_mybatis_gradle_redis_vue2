@@ -13,7 +13,7 @@ function hide(dom) {
 function  SearchSelect(data) {
     var liHeight=30;
     var self = this;
-    self.checked=null;
+    self.checked=[];
     if (!data.id) {
         console.log('id不能为空');
         return;
@@ -123,9 +123,20 @@ function  SearchSelect(data) {
 
     function trclick(e) {
         e.stopPropagation();
-        showElement.text(e.data.txt);
-        self.checked=e.data.val;
-        hide(divElement);
+        var val=e.data.val;
+        self.checked.push(val)
+        var delId='del-id-'+val;
+        var btnId='btn-id-'+val;
+        var txt=e.data.txt;
+        var txtShow=txt;
+        if(txt.length>5){
+            txtShow=txt.substring(0,5);
+        }
+        showElement.append("<button type='button' class='btn btn-default btn-xs' id='"+btnId+"'>"+txtShow+"<span class='glyphicon glyphicon-remove' aria-hidden='true'  id="+delId+"></span></button>")
+        $('#'+delId).click(function () {
+            self.checked.remove(val);
+            $('#'+btnId).remove();
+        })
     }
 
     flushTrs(options);
