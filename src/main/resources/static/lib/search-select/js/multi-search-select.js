@@ -125,7 +125,7 @@ function  SearchSelect(data) {
         e.stopPropagation();
         var val=e.data.val;
         var txt=e.data.txt;
-        var btnId='btn-id-'+val;
+        var btnId='btn-id-'+id+'-'+val;
         var have=false;
         for(var i=0;i<self.checked.length;i++){
             if(self.checked[i]==val){
@@ -142,7 +142,7 @@ function  SearchSelect(data) {
     function addChecked(val,txt,btnId) {
         $('#'+optionIdPre+val).css("background-color","whitesmoke")
         self.checked.push(val)
-        var delId='del-id-'+val;
+        var delId='del-id-'+id+'-'+val;
         var txtShow=txt;
         if(txt.length>5){
             txtShow=txt.substring(0,5);
@@ -163,7 +163,7 @@ function  SearchSelect(data) {
         flushTrs(options);
         for(var i=0;i<options.length;i++){
             if(options[i].checked){
-                addChecked(options[i].val,options[i].text,'btn-id-'+options[i].val)
+                addChecked(options[i].val,options[i].text,'btn-id-'+id+'-'+options[i].val)
             }
         }
     }
