@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>用户管理</title>
     <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/lib/search-select/css/multi-seachr-select.css">
+    <link rel="stylesheet" href="/lib/search-select/css/multi-search-select.css">
     <style>
         form div{
             float: left;
@@ -33,7 +33,7 @@
 <script type="text/javascript" th:src="${'/lib/jquery.min.js'}"></script>
 <script type="text/javascript" th:src="${'/lib/bootstrap/js/bootstrap.min.js'}"></script>
 <script type="text/javascript" th:src="${'/lib/vue2/vue.min.js'}"></script>
-<script type="text/javascript" th:src="${'/lib/search-select/js/search-multi-select.js'}"></script>
+<script type="text/javascript" th:src="${'/lib/search-select/js/multi-search-select.js'}"></script>
 
 </body>
 <script>
@@ -89,24 +89,27 @@
     vm.$nextTick(function () {
         var data=new Object();
         data.id="test1Id";
-        data.options=[{val:'01',text:'abc'},
-            {val:'02',text:'abcdabcdababcdabcdababcdabcdababcdabcdab'},
-            {val:'03',text:'bcd'},
-            {val:'04',text:'bcd'},
-            {val:'05',text:'bcd'},
-            {val:'06',text:'bcd'},
-            {val:'07',text:'cde'}];
+        data.options=[
+            {val:'01',text:'abc',checked:false},
+            {val:'02',text:'abcdabcdababcdabcdababcdabcdababcdabcdab',checked:true},
+            {val:'03',text:'bcd',checked:false},
+            {val:'04',text:'bcd',checked:true},
+            {val:'05',text:'bcd',checked:false},
+            {val:'06',text:'bcd',checked:true},
+            {val:'07',text:'cde',checked:false}
+            ];
         search1=new SearchSelect(data);
-
         var data1=new Object();
         data1.id="test1Id1";
-        data1.options=[{val:'01',text:'abc'},
-            {val:'02',text:'abcdabcdababcdabcdababcdabcdababcdabcdab'},
-            {val:'03',text:'bcd'},
-            {val:'04',text:'bcd'},
-            {val:'05',text:'bcd'},
-            {val:'06',text:'bcd'},
-            {val:'07',text:'cde'}];
+        data1.options=[
+            {val:'01',text:'abc',checked:true},
+            {val:'02',text:'abcdabcdababcdabcdababcdabcdababcdabcdab',checked:false},
+            {val:'03',text:'bcd',checked:true},
+            {val:'04',text:'bcd',checked:false},
+            {val:'05',text:'bcd',checked:true},
+            {val:'06',text:'bcd',checked:false},
+            {val:'07',text:'cde',checked:true}
+            ];
         search2=new SearchSelect(data1);
     })
 </script>

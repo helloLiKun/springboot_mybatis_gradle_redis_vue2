@@ -23,6 +23,7 @@ function  SearchSelect(data) {
     }
     var id = data.id;
     var showId=id+'-show-id';
+    var optionIdPre="search_option_"+id+"_";
     var options = data.options;
     var divElement = $('#' + id);
     divElement.before("<div id='"+showId+"' class='show-cls'></div>");
@@ -47,7 +48,6 @@ function  SearchSelect(data) {
 
     inputElement.click(function (e) {
         e.stopPropagation();
-        self.checked=null;
     });
 
     inputElement.bind("input propertychange",function () {
@@ -107,8 +107,8 @@ function  SearchSelect(data) {
         tabElement.height(0);
         if(opt!=null && opt.length>0){
             for(var i=0;i<opt.length;i++){
-                var optionId="search_option_"+id+"_"+i;
                 var option=opt[i];
+                var optionId=optionIdPre+option.val;
                 tabElement.append("<tr id='"+optionId+"'><td value='"+option.val+"'>"+option.text+"</td></tr>")
                 var obj = {val:option.val,txt:option.text};
                 $('#'+optionId).click(obj,trclick)
@@ -124,20 +124,48 @@ function  SearchSelect(data) {
     function trclick(e) {
         e.stopPropagation();
         var val=e.data.val;
+        var txt=e.data.txt;
+        var btnId='btn-id-'+val;
+        var have=false;
+        for(var i=0;i<self.checked.length;i++){
+            if(self.checked[i]==val){
+                have=true;
+            }
+        }
+        if(have){
+            removeChecked(val,btnId)
+        }else{
+            addChecked(val,txt,btnId);
+        }
+    }
+
+    function addChecked(val,txt,btnId) {
+        $('#'+optionIdPre+val).css("background-color","whitesmoke")
         self.checked.push(val)
         var delId='del-id-'+val;
-        var btnId='btn-id-'+val;
-        var txt=e.data.txt;
         var txtShow=txt;
         if(txt.length>5){
             txtShow=txt.substring(0,5);
         }
         showElement.append("<button type='button' class='btn btn-default btn-xs' id='"+btnId+"'>"+txtShow+"<span class='glyphicon glyphicon-remove' aria-hidden='true'  id="+delId+"></span></button>")
         $('#'+delId).click(function () {
-            self.checked.remove(val);
-            $('#'+btnId).remove();
+            removeChecked(val,btnId);
         })
     }
 
-    flushTrs(options);
+    function removeChecked(val,btnId) {
+        $('#'+optionIdPre+val).css("background-color","white")
+        self.checked.splice(self.checked.indexOf(val),1);;
+        $('#'+btnId).remove();
+    }
+
+    function initOptions() {
+        flushTrs(options);
+        for(var i=0;i<options.length;i++){
+            if(options[i].checked){
+                addChecked(options[i].val,options[i].text,'btn-id-'+options[i].val)
+            }
+        }
+    }
+    initOptions();
 }

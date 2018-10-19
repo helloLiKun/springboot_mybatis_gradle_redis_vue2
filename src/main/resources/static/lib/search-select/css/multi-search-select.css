@@ -30,7 +30,6 @@
     position: relative;
     border:1px solid #e0e0e0;
     overflow: auto;
-    background-color: whitesmoke;
     z-index: 1;
 }
 .search-select-cls > .options-cls > table > tr{
@@ -38,5 +37,5 @@
 }
 
 .search-select-cls > .options-cls >  table > tr:hover{
-    background-color: white;
+    background-color: whitesmoke;
 }
