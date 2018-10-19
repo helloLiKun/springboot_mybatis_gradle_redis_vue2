@@ -92,24 +92,32 @@
         vm.users=JSON.parse($('#usersJSON').val());
         var data=new Object();
         data.id="test1Id";
-        data.options=[{val:'123',text:'abc'},
-            {val:'234',text:'abcdabcdababcdabcdababcdabcdababcdabcdab'},
-            {val:'234',text:'bcd'},
-            {val:'234',text:'bcd'},
-            {val:'234',text:'bcd'},
-            {val:'234',text:'bcd'},
-            {val:'345',text:'cde'}];
+        data.options=[
+            {val:'00',text:'abc'},
+            {val:'01',text:'abcdabcdababcdabcdababcdabcdababcdabcdab'},
+            {val:'02',text:'bcd'},
+            {val:'03',text:'bcd'},
+            {val:'04',text:'bcd'},
+            {val:'05',text:'bcd'},
+            {val:'06',text:'cde'}
+            ];
+        data.checked='02';
         search1=new SearchSelect(data);
+        search1.checkedChange=function () {
+            alert(search1.checked)
+        }
 
         var data1=new Object();
         data1.id="test1Id1";
-        data1.options=[{val:'123',text:'abc'},
-            {val:'234',text:'abcdabcdababcdabcdababcdabcdababcdabcdab'},
-            {val:'234',text:'bcd'},
-            {val:'234',text:'bcd'},
-            {val:'234',text:'bcd'},
-            {val:'234',text:'bcd'},
-            {val:'345',text:'cde'}];
+        data1.options=[
+            {val:'000',text:'abc'},
+            {val:'001',text:'abcdabcdababcdabcdababcdabcdababcdabcdab'},
+            {val:'002',text:'bcd'},
+            {val:'003',text:'bcd'},
+            {val:'004',text:'bcd'},
+            {val:'005',text:'bcd'},
+            {val:'006',text:'cde'}
+            ];
         search2=new SearchSelect(data1);
     })
 </script>

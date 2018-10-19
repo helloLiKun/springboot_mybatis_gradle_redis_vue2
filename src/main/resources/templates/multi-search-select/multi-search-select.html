@@ -99,6 +99,9 @@
             {val:'07',text:'cde',checked:false}
             ];
         search1=new SearchSelect(data);
+        search1.checkedChange=function () {
+            alert(search1.checked)
+        }
         var data1=new Object();
         data1.id="test1Id1";
         data1.options=[

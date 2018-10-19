@@ -151,12 +151,14 @@ function  SearchSelect(data) {
         $('#'+delId).click(function () {
             removeChecked(val,btnId);
         })
+        checkedChange_();
     }
 
     function removeChecked(val,btnId) {
         $('#'+optionIdPre+val).css("background-color","white")
         self.checked.splice(self.checked.indexOf(val),1);;
         $('#'+btnId).remove();
+        checkedChange_();
     }
 
     function initOptions() {
@@ -166,6 +168,12 @@ function  SearchSelect(data) {
                 addChecked(options[i].val,options[i].text,'btn-id-'+id+'-'+options[i].val)
             }
         }
+    }
+
+    function checkedChange_() {
+        if(self.checkedChange){
+            self.checkedChange();
+        };
     }
     initOptions();
 }

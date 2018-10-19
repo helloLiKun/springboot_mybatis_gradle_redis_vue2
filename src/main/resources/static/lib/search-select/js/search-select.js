@@ -21,6 +21,9 @@ function  SearchSelect(data) {
     if (!data.options) {
         console.log('选项为空')
     }
+    if(data.checked){
+        self.checked=data.checked;
+    }
     var id = data.id;
     var showId=id+'-show-id';
     var options = data.options;
@@ -125,8 +128,19 @@ function  SearchSelect(data) {
         e.stopPropagation();
         showElement.text(e.data.txt);
         self.checked=e.data.val;
+        self.checkedChange();
         hide(divElement);
     }
 
+    function initVal() {
+        if(self.checked){
+            for(var i=0;i<options.length;i++){
+                if(options[i].val==self.checked){
+                    showElement.text(options[i].text);
+                }
+            }
+        }
+    }
     flushTrs(options);
+    initVal();
 }
