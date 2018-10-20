@@ -20992,3 +20992,88 @@ Caused by: java.net.NoRouteToHostException: No route to host: connect
 2018-10-19 16:29:42.476  INFO 10084 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
 2018-10-19 16:29:42.495  INFO 10084 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
 2018-10-19 16:29:42.639  INFO 10084 --- [XNIO-2 task-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-10-20 16:45:42.035  INFO 8568 --- [main] example.Application                      : Starting Application on MS-20171231KOHV with PID 8568 (started by Administrator in D:\java\INTELLIJ IDEA\springboot_mybatis_gradle_redis_vue2)
+2018-10-20 16:45:42.040  INFO 8568 --- [main] example.Application                      : The following profiles are active: home
+2018-10-20 16:45:42.506  INFO 8568 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c7045b9: startup date [Sat Oct 20 16:45:42 GMT+08:00 2018]; root of context hierarchy
+2018-10-20 16:45:43.690  INFO 8568 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-20 16:45:43.762  INFO 8568 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'propertySourcesPlaceholderConfigurer' with a different definition: replacing [Root bean: class [org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/context/PropertyPlaceholderAutoConfiguration.class]] with [Root bean: class [org.springframework.boot.autoconfigure.session.RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]]
+2018-10-20 16:45:46.153  INFO 8568 --- [main] org.xnio                                 : XNIO version 3.3.6.Final
+2018-10-20 16:45:46.175  INFO 8568 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.6.Final
+2018-10-20 16:45:46.453  WARN 8568 --- [main] io.undertow.websockets.jsr               : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-10-20 16:45:46.454  WARN 8568 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-10-20 16:45:46.491  INFO 8568 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2018-10-20 16:45:46.491  INFO 8568 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3990 ms
+2018-10-20 16:45:47.142  INFO 8568 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-10-20 16:45:47.149  INFO 8568 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-20 16:45:47.151  INFO 8568 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'springSessionRepositoryFilter' to: [/*]
+2018-10-20 16:45:47.152  INFO 8568 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-20 16:45:47.152  INFO 8568 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-10-20 16:45:47.152  INFO 8568 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-20 16:45:47.152  INFO 8568 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'resourceUrlEncodingFilter' to: [/*]
+2018-10-20 16:45:47.423 ERROR 8568 --- [main] o.s.b.b.PropertiesConfigurationFactory   : Properties configuration failed validation
+2018-10-20 16:45:47.424 ERROR 8568 --- [main] o.s.b.b.PropertiesConfigurationFactory   : Field error in object 'spring.datasource' on field 'type': rejected value [com.alibaba.druid.pool.DruidDataSource]; codes [typeMismatch.spring.datasource.type,typeMismatch.type,typeMismatch.java.lang.Class,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [spring.datasource.type,type]; arguments []; default message [type]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.lang.Class' for property 'type'; nested exception is java.lang.IllegalArgumentException: Cannot find class [com.alibaba.druid.pool.DruidDataSource]]
+2018-10-20 16:45:47.426  WARN 8568 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'searchSelectController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl': Unsatisfied dependency expressed through field 'userMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [D:\java\INTELLIJ IDEA\springboot_mybatis_gradle_redis_vue2\build\classes\main\example\user\mapper\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Generic.class]: Unsatisfied dependency expressed through method 'dataSource' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties': Could not bind properties to DataSourceProperties (prefix=spring.datasource, ignoreInvalidFields=false, ignoreUnknownFields=true, ignoreNestedProperties=false); nested exception is org.springframework.validation.BindException: org.springframework.boot.bind.RelaxedDataBinder$RelaxedBeanPropertyBindingResult: 1 errors
+Field error in object 'spring.datasource' on field 'type': rejected value [com.alibaba.druid.pool.DruidDataSource]; codes [typeMismatch.spring.datasource.type,typeMismatch.type,typeMismatch.java.lang.Class,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [spring.datasource.type,type]; arguments []; default message [type]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.lang.Class' for property 'type'; nested exception is java.lang.IllegalArgumentException: Cannot find class [com.alibaba.druid.pool.DruidDataSource]]
+2018-10-20 16:45:47.442  INFO 8568 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-10-20 16:45:47.458 ERROR 8568 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Binding to target org.springframework.boot.autoconfigure.jdbc.DataSourceProperties@4a9a878 failed:
+
+    Property: spring.datasource.type
+    Value: com.alibaba.druid.pool.DruidDataSource
+    Reason: Failed to convert property value of type 'java.lang.String' to required type 'java.lang.Class' for property 'type'; nested exception is java.lang.IllegalArgumentException: Cannot find class [com.alibaba.druid.pool.DruidDataSource]
+
+
+Action:
+
+Update your application's configuration
+
+2018-10-20 16:58:20.172  INFO 8488 --- [main] example.Application                      : Starting Application on MS-20171231KOHV with PID 8488 (started by Administrator in D:\java\INTELLIJ IDEA\springboot_mybatis_gradle_redis_vue2)
+2018-10-20 16:58:20.179  INFO 8488 --- [main] example.Application                      : The following profiles are active: home
+2018-10-20 16:58:21.210  INFO 8488 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7d9e8ef7: startup date [Sat Oct 20 16:58:21 GMT+08:00 2018]; root of context hierarchy
+2018-10-20 16:58:22.529  INFO 8488 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-20 16:58:22.611  INFO 8488 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'propertySourcesPlaceholderConfigurer' with a different definition: replacing [Root bean: class [org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/context/PropertyPlaceholderAutoConfiguration.class]] with [Root bean: class [org.springframework.boot.autoconfigure.session.RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]]
+2018-10-20 16:58:25.440  INFO 8488 --- [main] org.xnio                                 : XNIO version 3.3.6.Final
+2018-10-20 16:58:25.499  INFO 8488 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.6.Final
+2018-10-20 16:58:26.371  WARN 8488 --- [main] io.undertow.websockets.jsr               : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-10-20 16:58:26.372  WARN 8488 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-10-20 16:58:26.438  INFO 8488 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2018-10-20 16:58:26.438  INFO 8488 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5234 ms
+2018-10-20 16:58:27.068  INFO 8488 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-10-20 16:58:27.075  INFO 8488 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-20 16:58:27.077  INFO 8488 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'springSessionRepositoryFilter' to: [/*]
+2018-10-20 16:58:27.077  INFO 8488 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-20 16:58:27.077  INFO 8488 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-10-20 16:58:27.078  INFO 8488 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-20 16:58:27.078  INFO 8488 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'resourceUrlEncodingFilter' to: [/*]
+2018-10-20 16:58:29.069  INFO 8488 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7d9e8ef7: startup date [Sat Oct 20 16:58:21 GMT+08:00 2018]; root of context hierarchy
+2018-10-20 16:58:29.222  INFO 8488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/multiSearchSelect]}" onto public java.lang.String example.multi_search_select.MultiSearchSelectController.multiSearchSelect()
+2018-10-20 16:58:29.224  INFO 8488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/searchSelect]}" onto public java.lang.String example.search_select.controller.SearchSelectController.toSearchSelect(org.springframework.ui.ModelMap)
+2018-10-20 16:58:29.225  INFO 8488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test]}" onto public java.lang.String example.user.controller.UserController.userList(org.springframework.ui.ModelMap)
+2018-10-20 16:58:29.226  INFO 8488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/formdataSubmit]}" onto public java.lang.String example.user.controller.UserController.formDataSubmit(java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2018-10-20 16:58:29.227  INFO 8488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/userSubmit]}" onto public java.lang.String example.user.controller.UserController.userSubmit(example.user.entity.User)
+2018-10-20 16:58:29.227  INFO 8488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/formMultiple]}" onto public java.lang.String example.user.controller.UserController.formMultiple(java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile[])
+2018-10-20 16:58:29.241  INFO 8488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-10-20 16:58:29.242  INFO 8488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-20 16:58:29.358  INFO 8488 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-20 16:58:29.359  INFO 8488 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-20 16:58:29.430  INFO 8488 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-20 16:58:31.295  INFO 8488 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-10-20 16:58:31.297  INFO 8488 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-10-20 16:58:31.317  INFO 8488 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-10-20 16:58:31.357  INFO 8488 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-10-20 16:58:31.379  INFO 8488 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2018-10-20 16:58:31.546  INFO 8488 --- [main] b.c.e.u.UndertowEmbeddedServletContainer : Undertow started on port(s) 8809 (http)
+2018-10-20 16:58:31.552  INFO 8488 --- [main] example.Application                      : Started Application in 12.592 seconds (JVM running for 13.636)
+2018-10-20 17:04:47.349  INFO 8488 --- [XNIO-2 task-1] io.undertow.servlet                      : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-10-20 17:04:47.349  INFO 8488 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-10-20 17:04:47.396  INFO 8488 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 46 ms
+2018-10-20 17:04:47.812  INFO 8488 --- [XNIO-2 task-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited

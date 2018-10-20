@@ -26,19 +26,15 @@ repositories {
         maven {
         url "https://start.spring.io"
     }
-//    maven {
-////        url "http://repository.pentaho.org/artifactory/repo/"
-//        url "http://nexus.pentaho.org/content/groups/omni/"
-//    }
-//    maven{
-//        url "http://repo.spring.io/milestone/)"
-//    }
-//    maven{
-//        url "https://mvnrepository.com/artifact/org.jeecg/easypoi-annotation"
-//    }
-//    maven{
-//        url "http://docs.codehaus.org/display/JANINO/Home"
-//    }
+    maven{
+        url "http://repo.spring.io/milestone/)"
+    }
+    maven{
+        url "https://mvnrepository.com/artifact/org.jeecg/easypoi-annotation"
+    }
+    maven{
+        url "http://docs.codehaus.org/display/JANINO/Home"
+    }
 }
 
 configurations {
@@ -63,8 +59,8 @@ dependencies {
             "com.github.pagehelper:pagehelper:5.0.3",
             "com.alibaba:fastjson:1.2.34",
             "com.alibaba:druid:+",
-//            "com.oracle:ojdbc6:12.1.0.2.0",
-            "oracle:ojdbc6:11.2.0.1.0",
+            "com.oracle:ojdbc6:12.1.0.2.0",
+//            "oracle:ojdbc6:11.2.0.1.0",
             "org.springframework:spring-test",
             "org.springframework.session:spring-session",
             "org.springframework.boot:spring-boot-starter-data-redis",
