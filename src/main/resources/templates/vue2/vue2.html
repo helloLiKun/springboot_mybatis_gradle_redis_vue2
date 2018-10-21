@@ -3,20 +3,24 @@
       xmlns:v-on="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>模板语法</title>
+    <title>vue.js 2.0测试</title>
 </head>
 <body>
 <div id="vm-id">
-    <p>1.组件test-title测试：</p>
-    <test-title v-bind:title="vtest" v-bind:message="vmsg"></test-title>
-
-    </form>
-
+    <h3>计算属性和侦听</h3>
+    <h4>计算属性</h4>
+    <p>Original message:{{message}}</p>
+    <p>reversed message:{{reverseMessage}}</p>
+    <p>小结：计算属性即封装一段逻辑处理，直接获取相关结果，便于复用和维护</p>
+    <h4>计算属性vs方法</h4>
+    <button @click="showComputedNow">showComputedNow</button>
+    <button @click="showMethodNow">showMethodNow</button>
+    <h4>小结：计算属性基于vue实例对象的依赖进行缓存，而date对象不是响应式所以有缓存值，而方法中会屡次更新</h4>
 </div>
 <script type="text/javascript" th:src="${'/lib/jquery.min.js'}"></script>
 <script type="text/javascript" th:src="${'/lib/bootstrap/js/bootstrap.min.js'}"></script>
 <script type="text/javascript" th:src="${'/lib/vue2/vue.min.js'}"></script>
-<script type="text/javascript" th:src="${'/js/vue-test/vue-component.js'}"></script>
+<script type="text/javascript" th:src="${'/test/js/vue-component.js'}"></script>
 
 </body>
 <script>
@@ -27,12 +31,29 @@
     vm = new Vue({
         el: '#vm-id',
         data: {
-            vtest:'vtest-val',
-            vmsg:'vmsg-val'
+            message:'hello world',
+            firstName:'Jack',
+            lastName:'Smith',
         },
         computed: {
+            reverseMessage:function () {
+                return this.message.split('').reverse().join(' ');
+            },
+            nowtime:function () {
+                return Date.now();
+            },
+
         },
         methods: {
+            now:function () {
+                return Date.now();
+            },
+            showComputedNow:function () {
+                console.log(vm.nowtime)
+            },
+            showMethodNow:function () {
+                console.log(vm.now());
+            },
         },
         beforeCreate:function () {
             console.log('beforeCreate')
