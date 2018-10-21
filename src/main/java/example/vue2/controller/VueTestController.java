@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class VueTestController {
-    @RequestMapping("vue2")
+    @RequestMapping("/vue2")
     public String vue2(){
         return "vue2/vue2";
     }
