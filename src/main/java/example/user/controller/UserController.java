@@ -18,11 +18,10 @@ import java.util.List;
  */
 @Controller
 public class UserController {
-    @RequestMapping("/test")
+    @RequestMapping("/form")
     public String userList(ModelMap map){
-        List<User> list=userService.getList();
-        map.put("usersJSON", JSON.toJSONString(list));
-        return "user/list";
+        map.put("userJSON",JSON.toJSONString(new User()));
+        return "user/form";
     }
 
     @RequestMapping("/userSubmit")
@@ -34,18 +33,6 @@ public class UserController {
         return JSON.toJSONString(resp);
     }
 
-    @RequestMapping("/formdataSubmit")
-    @ResponseBody
-    public String formDataSubmit(String id,String test,String userJSON,MultipartFile[] files){
-        AjaxResponse.Body resp=AjaxResponse.FAILED.body();
-        System.out.println("id:"+id);
-        System.out.println("test:"+test);
-        System.out.println("user:"+userJSON);
-        User user=JSON.parseObject(userJSON,User.class);
-        System.out.println("user..:"+user.toString());
-        resp=AjaxResponse.SUCCEEDED.body();
-        return JSON.toJSONString(resp);
-    }
     @RequestMapping("/formMultiple")
     @ResponseBody
     public String formMultiple(String id,String userJSON,MultipartFile[] files){
